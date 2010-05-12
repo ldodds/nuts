@@ -1,0 +1,78 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@base <http://statistics.data.gov.uk/def/nuts-geography/> .
+
+<>
+  rdfs:label "Nomenclature of Units for Territorial Statistics".
+  
+<Region> a rdfs:Class ;
+  rdfs:label "Region" ;
+  skos:prefLabel "Region" ;
+  skos:note <http://en.wikipedia.org/wiki/NUTS> ;
+  skos:note <http://www.statistics.gov.uk/geography/nuts.asp> ;
+  rdfs:isDefinedBy <> .
+
+<LocalAdministrativeUnit> a rdfs:Class ;
+  rdfs:label "Local Administrative Unit" ;
+  skos:prefLabel "Local Administrative Unit" ;
+  skos:note <http://en.wikipedia.org/wiki/Local_administrative_unit> ;
+  skos:note <http://www.statistics.gov.uk/geography/nuts.asp> ;  
+  rdfs:isDefinedBy <> .
+
+<RegionLevel1> a rdfs:Class ;
+  rdfs:subClassOf <Region> ;
+  rdfs:label "Region Level 1" ;
+  skos:prefLabel "Region Level 1" ;
+  rdfs:isDefinedBy <> .
+
+<RegionLevel2> a rdfs:Class ;
+  rdfs:subClassOf <Region> ;
+  rdfs:label "Region Level 2" ;
+  skos:prefLabel "Region Level 2" ;
+  rdfs:isDefinedBy <> .
+  
+<RegionLevel3> a rdfs:Class ;
+  rdfs:subClassOf <Region> ;
+  rdfs:label "Region Level 3" ;
+  skos:prefLabel "Region Level 3" ;
+  rdfs:isDefinedBy <> .
+  
+<LAULevel1> a rdfs:Class ;
+  rdfs:subClassOf <LocalAdministrativeUnit> ;
+  rdfs:label "LAU Level 1" ;
+  skos:prefLabel "LAU Level 1" ;
+  rdfs:isDefinedBy <> .  
+  
+<LAULevel2> a rdfs:Class ;
+  rdfs:subClassOf <LocalAdministrativeUnit> ;
+  rdfs:label "LAU Level 2" ;
+  skos:prefLabel "LAU Level 2" ;
+  rdfs:isDefinedBy <> .    
+  
+<regionLevel1> a rdf:Property ;
+  rdfs:label "region Level 1";
+  rdfs:range <RegionLevel1> ;
+  rdfs:isDefinedBy <> .
+
+<regionLevel2> a rdf:Property ;
+  rdfs:label "region Level 2";
+  rdfs:range <RegionLevel2> ;  
+  rdfs:isDefinedBy <> .
+
+<regionLevel3> a rdf:Property ;
+  rdfs:label "region Level 3";
+  rdfs:range <RegionLevel3> ;  
+  rdfs:isDefinedBy <> .
+  
+<lauLevel1> a rdf:Property ;
+  rdfs:label "lau Level 1";
+  rdfs:range <LauLevel1> ;  
+  rdfs:isDefinedBy <> .
+
+<lauLevel2> a rdf:Property ;
+  rdfs:label "lau Level 2";
+  rdfs:range <LauLevel2> ;  
+  rdfs:isDefinedBy <> .
